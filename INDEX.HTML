@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Code | El Tiempo Apremia</title>
+    <style>
+        :root {
+            --primary: #FF8C00;
+            --secondary: #FFD700;
+            --bg: #1a1a1a; /* Fondo oscuro para que resalte lo impresionante */
+            --card-bg: #ffffff;
+            --text: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Contenedor Principal con animación */
+        .app-container {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header Estilo Moderno */
+        .header {
+            background: var(--text);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .logo-ring {
+            width: 110px;
+            height: 110px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid var(--primary);
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+        }
+
+        .logo-ring img { width: 70%; transition: transform 0.3s; }
+        .logo-ring:hover img { transform: scale(1.1) rotate(5deg); }
+
+        .header h1 { 
+            margin: 0; 
+            font-size: 1.8rem; 
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #FFD700, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Sección de Carnes (Lo que hay) */
+        .carnes-badge-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding: 15px;
+            background: #fdfdfd;
+        }
+
+        .badge {
+            background: var(--text);
+            color: var(--secondary);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Menú Interactivo */
+        .menu-grid { padding: 20px; }
+
+        .section-title {
+            font-size: 0.8rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 20px 0 10px 5px;
+            display: block;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .menu-card:hover {
+            transform: translateX(10px);
+            background: #fff8e1;
+        }
+
+        .info h4 { margin: 0; color: var(--text); font-size: 1.1rem; }
+        .info span { font-size: 0.8rem; color: #777; }
+
+        .price-tag {
+            background: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: #f4f4f4;
+            font-size: 0.8rem;
+        }
+
+        .zenith-logo { color: var(--primary); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="header">
+        <div class="logo-ring">
+            <img src="tacos_.png" alt="Logo">
+        </div>
+        <h1>EL TIEMPO APREMIA</h1>
+        <p style="margin:5px 0 0; opacity: 0.8; font-size: 0.9rem;">Menú Digital</p>
+    </div>
+
+    <div class="carnes-badge-container">
+        <span class="badge">Bistec</span>
+        <span class="badge">Chorizo</span>
+        <span class="badge">Costilla</span>
+        <span class="badge">Tripa</span>
+    </div>
+
+    <div class="menu-grid">
+        <span class="section-title">Nuestros Tacos</span>
+        <div class="menu-card">
+            <div class="info">
+                <h4>Tacos Normales</h4>
+                <span>Bistec / Chorizo / Costilla</span>
+            </div>
+            <div class="price-tag">$18</div>
+        </div>
+        <div class="menu-card">
+            <div class="info">
+                <h4>Tacos de Tripa</h4>
+                <span>Especialidad de la casa</span>
+            </div>
+            <div class="price-tag">$22</div>
+        </div>
+
+        <span class="section-title">Tortas Calientes</span>
+        <div class="menu-card">
+            <div class="info">
+                <h4>Tortas Normales</h4>
+                <span>Con el sazón de siempre</span>
+            </div>
+            <div class="price-tag">$32</div>
+        </div>
+        <div class="menu-card">
+            <div class="info">
+                <h4>Torta de Tripa</h4>
+                <span>¡La favorita!</span>
+            </div>
+            <div class="price-tag">$35</div>
+        </div>
+
+        <span class="section-title">Quesadillas</span>
+        <div class="menu-card">
+            <div class="info">
+                <h4>Quesadilla Normal</h4>
+                <span>Mucho queso y sabor</span>
+            </div>
+            <div class="price-tag">$28</div>
+        </div>
+        <div class="menu-card">
+            <div class="info">
+                <h4>Quesadilla de Tripa</h4>
+                <span>Combinación perfecta</span>
+            </div>
+            <div class="price-tag">$32</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Diseñado con precisión por <br>
+        <span class="zenith-logo">ZENITH CODE</span> &copy; 2026
+    </div>
+</div>
+
+</body>
+</html>
